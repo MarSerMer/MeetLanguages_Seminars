@@ -6,12 +6,16 @@
 
 Console.WriteLine("Введите неотрицательное число");
 int number = Convert.ToInt32(Console.ReadLine());
-int resultNumber = -number;
-
+int resultNumber = 0 - number;
+if (number >= 0)
+{
   while (resultNumber<=number)
-  {
-  Console.Write(resultNumber); 
-  Console.Write(" ");
-  resultNumber = resultNumber + 1;    
-  } 
-  
+Console.Write(resultNumber); 
+Console.Write(" ");
+int resultNumber = resultNumber + 1;     
+    
+    }
+else 
+{
+Console.WriteLine("Нужно именно неотрицательное число");
+}
