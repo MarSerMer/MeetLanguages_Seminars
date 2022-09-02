@@ -9,6 +9,8 @@ int number1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите первое число (делитель)");
 int number2 = Convert.ToInt32(Console.ReadLine());
 
+if (number2 !=0)
+{
 int result = number1 % number2;
 if (result == 0)
 {
@@ -17,4 +19,8 @@ if (result == 0)
 else
 {
     Console.WriteLine($"Число {number1} делится на {number2} с остатком {result}");
+}
+}
+else{
+    Console.WriteLine("Нет, делить на 0 мы сегодня не будем...");
 }
