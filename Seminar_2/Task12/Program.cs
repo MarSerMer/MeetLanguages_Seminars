@@ -4,17 +4,17 @@
 // 34, 5 -> не кратно, остаток 4
 // 16, 4 -> кратно
 
-Console.Writeline("Введите первое число (делимое)");
-int number1 = Convert.ToInt32(Console.Readline());
-Console.Writeline("Введите первое число (делитель)");
-int number2 = Convert.ToInt32(Console.Readline());
+Console.WriteLine("Введите первое число (делимое)");
+int number1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите первое число (делитель)");
+int number2 = Convert.ToInt32(Console.ReadLine());
 
 int result = number1 % number2;
 if (result == 0)
 {
-    Console.Writeline($"Число {number1} делится на {number2} без остатка");
+    Console.WriteLine($"Число {number1} делится на {number2} без остатка");
 }
 else
 {
-    Console.Writeline($"Число {number1} делится на {number2} с остатком {result}");
+    Console.WriteLine($"Число {number1} делится на {number2} с остатком {result}");
 }
