@@ -14,13 +14,6 @@ if (numberModule < 100)
     }
 else
     {
-        if (numberModule < 1000)
-        {
-            int resultFigure = numberModule % 10;
-            Console.WriteLine($"Третья цифра этого числа: {resultFigure}");
-        }
-        else 
-        {
             while (numberModule >= 10)
             {
                 numberModule = numberModule / 10;
@@ -30,5 +23,4 @@ else
             int delitel = Convert.ToInt32(Math.Pow(10, (count - 3)));
             int resultFigure = (numberModule / delitel) % 10;
             Console.WriteLine($"Третья цифра этого числа: {resultFigure}");
-        }
     }
