@@ -2,16 +2,32 @@
 // Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
-int [] array = new int [10];
-Random rand = new Random();
-int i = 0;
-for (i = 0; i < array.Length; i++)
+
+// Генерировала новый массив. В итоге это сделано ниже с помощью метода
+// int [] array = new int [10]; 
+// Random rand = new Random();
+// int i = 0;
+// for (i = 0; i < array.Length; i++)
+// {
+//     array[i] = rand.Next(1,11);
+// }
+// Console.WriteLine(string.Join(" ,", array));
+
+int [] GetArray ( int size, int NumberFrom, int NumberBefore)
 {
-    array[i] = rand.Next(1,11);
+    int[] arr = new int[size];
+    Random rand = new Random();
+    for (int i = 0; i < size; i++)
+    {
+        arr [i] = rand.Next(NumberFrom, NumberBefore + 1);
+    }
+    return arr;
 }
-Console.WriteLine(string.Join(" ,", array));
+int [] array = GetArray(12, -9, 9);
+Console.WriteLine(string.Join(", ", array));
+
 int [] arrayNew = new int [array.Length/2];
-i = 0;
+int i = 0;
 int t = array.Length - 1;
 for (int j = 0; j < array.Length/2; j++)
 {
