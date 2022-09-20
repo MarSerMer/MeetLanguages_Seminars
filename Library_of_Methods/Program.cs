@@ -6,6 +6,12 @@ int ReadNumber(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
+
+int number = ReadNumber("Введите число");
+Console.WriteLine($"Вы ввели число {number}");
+
+
+
 // ГЕНЕРИРУЕМ МАССИВ ИЗ СЛУЧАЙНЫХ ЧИСЕЛ ИЗ ЗАДАННОГО ПРОМЕЖУТКА
 
 int [] GetArray ( int size, int NumberFrom, int NumberBefore)
